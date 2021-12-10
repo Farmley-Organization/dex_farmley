@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include dex_farmley *.css
+recursive-include dex_farmley *.csv
+recursive-include dex_farmley *.html
+recursive-include dex_farmley *.ico
+recursive-include dex_farmley *.js
+recursive-include dex_farmley *.json
+recursive-include dex_farmley *.md
+recursive-include dex_farmley *.png
+recursive-include dex_farmley *.py
+recursive-include dex_farmley *.svg
+recursive-include dex_farmley *.txt
+recursive-exclude dex_farmley *.pyc
