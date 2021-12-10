@@ -272,6 +272,8 @@ class CustomMaterialProduce(MaterialProduce):
                         se_item.is_scrap_item = 1 if res.type == 'Scrap' else 0
                         if res.type == 'Scrap':
                             se_item.basic_rate=itm_doc.valuation_rate
+                            if itm_doc.valuation_rate == 0:
+                                se_item.allow_zero_valuation_rate=1
                         # in stock uom
                         se_item.conversion_factor = 1.00
             
