@@ -82,7 +82,7 @@ app_license = "MIT"
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Material Produce":"dex_farmley.dex_farmley.custom_material_produce.CustomMaterialProduce"
+	"Material Produce":"dex_farmley.dexfarmley.custom_material_produce.CustomMaterialProduce"
 }
 
 # Document Events
