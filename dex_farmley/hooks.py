@@ -89,13 +89,11 @@ override_doctype_class = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Delivery Note": {
+		"before_save": "dex_farmley.dexfarmley.custom_delivery_note.return_against_sales_invoice",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
