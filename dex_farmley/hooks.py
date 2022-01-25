@@ -92,6 +92,9 @@ override_doctype_class = {
 doc_events = {
 	"Delivery Note": {
 		"before_save": "dex_farmley.dexfarmley.custom_delivery_note.return_against_sales_invoice",
+	},
+	"Stock Entry": {
+		"before_save": "dex_farmley.dexfarmley.custom_stock_entry.before_save",
 	}
 }
 
