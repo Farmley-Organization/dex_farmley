@@ -8,6 +8,6 @@ def before_save(self,method):
         for i in doc.required_items:          
             idoc=frappe.get_doc("Item",i.item_code)
             if idoc.fg==pidoc.fg :
-                frappe.throw("FG To FG Transfer Couldn't Possible")
+                frappe.throw("FG To FG Transfer didn't Possible")
                                    
                             
