@@ -1,8 +1,6 @@
 
 
 
-
-from codecs import ignore_errors
 import frappe
 
 
