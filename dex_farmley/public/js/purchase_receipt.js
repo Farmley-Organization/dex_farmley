@@ -22,7 +22,7 @@ refresh:function(frm){
                 frappe.call({
                     method:"dex_farmley.dexfarmley.custom_purchase_receipt.make_sales_return",
                     args: {
-                        source_doc:d.inter_company_reference,
+                        source_name:d.inter_company_reference,
                     },
                     callback: function(r){
                         
