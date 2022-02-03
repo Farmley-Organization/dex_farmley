@@ -21,7 +21,9 @@ refresh:function(frm){
             frm.add_custom_button(__('Sales Return'), function() {
                 frappe.call({
                     method:"dex_farmley.dexfarmley.custom_purchase_receipt.make_sales_return",
-                    args: {"source_doc":d.inter_company_reference},
+                    args: {
+                        source_doc:d.inter_company_reference,
+                    },
                     callback: function(r){
                         
                     },
