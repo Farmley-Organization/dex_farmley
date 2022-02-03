@@ -18,6 +18,7 @@ refresh:function(frm){
     if (frm.doc.docstatus==1 && frm.doc.is_return==1) {
         frappe.model.get_value('Purchase Receipt', {"return_against":frm.doc.return_against}, 'inter_company_reference',
             function(d) {
+                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$",d.inter_company_reference)
             frm.add_custom_button(__('Sales Return'), function() {
                 frappe.call({
                     method:"dex_farmley.dexfarmley.custom_purchase_receipt.make_sales_return",
