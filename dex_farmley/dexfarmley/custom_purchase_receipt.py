@@ -490,3 +490,8 @@ def make_sales_return(source_name,name):
                     i.stock_qty = 1 * flt(j.stock_qty)
     doc.save(ignore_permissions=True)
     doc.submit()
+
+
+def on_submit():
+    frappe.msgprint("Please Create Sales return through Create Button!!!!!!!")
+    

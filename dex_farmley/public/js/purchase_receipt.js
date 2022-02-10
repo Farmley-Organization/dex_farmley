@@ -19,8 +19,6 @@ frappe.ui.form.on("Purchase Receipt", {
             })
         }
     },
-    on_submit:function(frm){
-        frappe.msgprint("Please Create Sales return through Create Button!!!!!!!")
-    },
+   
 })
 
