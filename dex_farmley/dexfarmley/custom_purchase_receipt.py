@@ -482,7 +482,7 @@ def make_sales_return(source_name,name):
     for i in doc.items:
         if i.item_code not in lst:
             childdoc=frappe.get_doc("Delivery Note Item",{"parent":doc.name})
-            childdoc.delete()
+            doc.remove(i)
         if i.item_code in lst:
             for j in p_doc.items:
                 if i.item_code==j.item_code:
