@@ -1,8 +1,9 @@
 frappe.ui.form.on("Purchase Receipt", {
-    on_submit:function(frm){
+    refresh:function(frm){
         if (frm.doc.is_return==1) {
             frappe.model.get_value('Purchase Receipt', frm.doc.return_against, 'inter_company_reference',
                 function(d) {
+                    frm.add_custom_button(__('Sales Return'), function() {
                     frappe.call({
                         method:"dex_farmley.dexfarmley.custom_purchase_receipt.make_sales_return",
                         args: {
@@ -13,9 +14,13 @@ frappe.ui.form.on("Purchase Receipt", {
                             
                         },
                     })
+                }, __('Create'));
                     
             })
         }
-    }
+    },
+    on_submit:function(frm){
+        frappe.msgprint("Please Create Sales return through Create Button!!!!!!!")
+    },
 })
 
